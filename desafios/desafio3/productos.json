@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Bajaj dominar 250",
+    "description": "naked",
+    "price": 4000,
+    "thumbnail": "./img/domi250",
+    "code": "moto01",
+    "stock": 5
+  },
+  {
+    "id": 2,
+    "title": "Kawasaki Z400",
+    "description": "naked",
+    "price": 8000,
+    "thumbnail": "./img/kawa-z400",
+    "code": "moto02",
+    "stock": 3
+  },
+  {
+    "id": 3,
+    "title": "Kawasaki Z650",
+    "description": "naked",
+    "price": 14000,
+    "thumbnail": "./img/kawa-z650",
+    "code": "moto03",
+    "stock": 1
+  },
+  {
+    "id": 4,
+    "title": "Bajaj dominar 400",
+    "description": "naked",
+    "price": 6000,
+    "thumbnail": "./img/domi400",
+    "code": "moto04",
+    "stock": 4
+  },
+  {
+    "id": 5,
+    "title": "Bajaj ns200",
+    "description": "naked",
+    "price": 3200,
+    "thumbnail": "./img/ns200",
+    "code": "moto05",
+    "stock": 8
+  },
+  {
+    "id": 6,
+    "title": "Kawasaki Z900",
+    "description": "naked",
+    "price": 18000,
+    "thumbnail": "./img/kawa-z900",
+    "code": "moto06",
+    "stock": 4
+  },
+  {
+    "id": 7,
+    "title": "Kawasaki ninja 400",
+    "description": "sport-touring",
+    "price": 10000,
+    "thumbnail": "./img/ninja400",
+    "code": "moto07",
+    "stock": 6
+  },
+  {
+    "id": 8,
+    "title": "Kawasaki ninja 650",
+    "description": "sport-touring",
+    "price": 15000,
+    "thumbnail": "./img/kawa-z400",
+    "code": "moto08",
+    "stock": 3
+  },
+  {
+    "id": 9,
+    "title": "Kawasaki zx6r",
+    "description": "deportiva",
+    "price": 30000,
+    "thumbnail": "./img/zx6r",
+    "code": "moto09",
+    "stock": 2
+  },
+  {
+    "id": 10,
+    "title": "Benelli 752s",
+    "description": "naked",
+    "price": 11000,
+    "thumbnail": "./img/752s",
+    "code": "moto10",
+    "stock": 3
+  }
+]
