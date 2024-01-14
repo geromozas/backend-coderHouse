@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Dominar 400",
+    "description": "naked",
+    "price": 5500,
+    "thumbnail": "./img/domi400",
+    "code": "moto01",
+    "stock": 5
+  },
+  {
+    "id": 2,
+    "title": "Kawasaki z650",
+    "description": "naked",
+    "price": 14000,
+    "thumbnail": "./img/z650",
+    "code": "moto02",
+    "stock": 4
+  },
+  {
+    "id": 3,
+    "title": "Ducati monster 797",
+    "description": "naked",
+    "price": 17000,
+    "thumbnail": "./img/797",
+    "code": "moto03",
+    "stock": 2
+  }
+]
