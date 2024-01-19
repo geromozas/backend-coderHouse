@@ -28,7 +28,7 @@ cartsRouter.post("/:cid/product/:pid", async (req, res) => {
     await cartManager.addProductToCart(cid, pid);
     res.status(200).send("Producto agregado con éxito");
   } catch (error) {
-    // res.send("Error al intentar guardar productos en el carrito");
+    console.error(error);
     res.status(500).send("Error al intentar guardar productos en el carrito");
   }
 });
