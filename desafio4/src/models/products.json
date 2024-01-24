@@ -1,0 +1,112 @@
+[
+  {
+    "id": "8d60e510-fa49-4e1c-91b0-0a858106a898",
+    "title": "Dominar 250",
+    "description": "naked",
+    "price": 3500,
+    "thumbnail": "./img/domi250",
+    "code": "moto01",
+    "stock": 5,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "7f8f754d-4e60-45ae-903d-40725e8dbecf",
+    "title": "Kawasaki Z400",
+    "description": "naked",
+    "price": 8000,
+    "thumbnail": "./img/kawa-z400",
+    "code": "moto02",
+    "stock": 2,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "6fcb2c3e-f5e1-45a7-8bf3-e8f40fc1d331",
+    "title": "Kawasaki Z650",
+    "description": "naked",
+    "price": 15000,
+    "thumbnail": "./img/kawa-z650",
+    "code": "moto03",
+    "stock": 5,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "db501e08-ebab-4f2f-9618-b0bd0f95e627",
+    "title": "Kawasaki Z900",
+    "description": "naked",
+    "price": 22000,
+    "thumbnail": "./img/kawa-z900",
+    "code": "moto04",
+    "stock": 4,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "8f317003-94ea-433b-8745-688048967a6b",
+    "title": "Cf moto NK400",
+    "description": "naked",
+    "price": 4500,
+    "thumbnail": "./img/kawa-nk400",
+    "code": "moto05",
+    "stock": 2,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "02a68f80-1a51-4eca-aaf2-2a8d98690aa6",
+    "title": "Benelli 251s",
+    "description": "naked",
+    "price": 3500,
+    "thumbnail": "./img/kawa-251s",
+    "code": "moto06",
+    "stock": 6,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "f4c25074-8117-4120-a488-cff14ddf7588",
+    "title": "Benelli 302s",
+    "description": "naked",
+    "price": 5000,
+    "thumbnail": "./img/kawa-302s",
+    "code": "moto07",
+    "stock": 3,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "04494ffa-714c-46d3-8546-2772dec3336b",
+    "title": "Benelli 752s",
+    "description": "naked",
+    "price": 13000,
+    "thumbnail": "./img/kawa-752s",
+    "code": "moto08",
+    "stock": 2,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "ca3a45f1-1f7a-4aaf-adc8-607b3d57a62f",
+    "title": "Benelli 600i",
+    "description": "naked",
+    "price": 13700,
+    "thumbnail": "./img/kawa-600i",
+    "code": "moto09",
+    "stock": 2,
+    "status": "false",
+    "category": "moto"
+  },
+  {
+    "id": "48139b2b-5f25-4458-893e-7a9a1d2c6865",
+    "title": "Honda cb500f",
+    "description": "naked",
+    "price": 10000,
+    "thumbnail": "./img/kawa-cb500f",
+    "code": "moto10",
+    "stock": 2,
+    "status": "false",
+    "category": "moto"
+  }
+]
