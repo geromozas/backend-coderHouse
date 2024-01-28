@@ -8,4 +8,8 @@ router.get("/home", (req, res) => {
   res.render("home", {});
 });
 
+router.get("/realtimeproducts", (req, res) => {
+  res.render("realTimeProducts", {});
+});
+
 export { router as routerHome };
