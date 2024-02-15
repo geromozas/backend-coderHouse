@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "desafio4",
+  "name": "1era-practica-integradora",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/index.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2",
+    "mongoose": "^8.1.1",
     "socket.io": "^4.7.4",
     "uuid": "^9.0.1"
   }
