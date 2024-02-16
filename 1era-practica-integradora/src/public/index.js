@@ -2,22 +2,19 @@ const socket = io();
 
 const caja = document.getElementById("caja");
 
-socket.on("products", (data) => {
-  const products = data;
+socket.on("productAdded", (data) => {
+  const product = data;
   const newBox = document.createElement("div");
   newBox.className = "products-container";
 
-  products.forEach((product) => {
-    newBox.innerHTML += `
+  newBox.innerHTML += `
       <div class="product-card">
         <span>${product.title}</span>
         <p>${product.description}</p>
         <p>$${product.price}</p>
       </div>
     `;
-  });
 
-  caja.innerHTML = "";
   caja.appendChild(newBox);
 });
 

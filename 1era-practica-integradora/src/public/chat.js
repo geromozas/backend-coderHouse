@@ -12,7 +12,7 @@ socket.on("message", (data) => {
         <p>${message.message}</p>
     `;
   chatBox.appendChild(newDiv);
-  scroolToBottom();
+  scrollToBottom();
 });
 
 const sendMessage = (e) => {
