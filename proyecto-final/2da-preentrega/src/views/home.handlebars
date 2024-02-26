@@ -1,0 +1,15 @@
+<div class="products" id="home">
+  <h1>GM motos - PRODUCTOS</h1>
+  <nav class="products__container">
+    {{#each products}}
+      <div class="product__card">
+        {{!-- <img src="{{this.thumbnail}}" alt="{{this.title}}" /> --}}
+        <h2>{{this.title}}</h2>
+        <h3>{{this.category}}</h3>
+        {{!-- <h3>{{this.description}}</h3> --}}
+        <p>U$S{{this.price}}</p>
+      </div>
+    {{/each}}
+  </nav>
+</div>
+<div class="caja" id="caja"></div>
