@@ -33,8 +33,10 @@ export class MongoProductManager {
 
   getProducts = async (limit, page, query, sort) => {
     try {
-      let products = await ProductModel.paginate({ query }, { page, limit });
+      let options = (query, { page, limit });
+      let products = await ProductModel.paginate(options).lean();
       if (products.docs.length === 0) {
+        console.log(products);
         return {
           status: "success",
           payload: [],
