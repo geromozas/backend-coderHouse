@@ -15,7 +15,8 @@ export class MongoCartManager {
     try {
       const products = await CartModel.findOne({ _id: id })
         .select("products")
-        .populate("products.product_id");
+        .populate("products.product_id")
+        .lean();
       if (!products) throw new Error("No se pudo conseguir ningun producto");
       return products.products;
     } catch (error) {
@@ -28,11 +29,21 @@ export class MongoCartManager {
       const existingCart = await CartModel.findById(cart_id);
       if (!existingCart) throw new Error("No se encontro el carrito");
 
-      const newProduct = { product_id: product_id, quantity };
-      existingCart.products.push(newProduct);
+      const productIdToUpdate = new mongoose.Types.ObjectId(product_id);
+      const existingProductIndex = existingCart.products.findIndex(
+        (p) => p.product_id.toString() === productIdToUpdate.toString()
+      );
 
-      await existingCart.save();
-      return existingCart;
+      if (existingProductIndex !== -1) {
+        existingCart.products[existingProductIndex].quantity += quantity;
+        await existingCart.save();
+        return existingCart;
+      } else {
+        const newProduct = { product_id, quantity };
+        existingCart.products.push(newProduct);
+        await existingCart.save();
+        return existingCart;
+      }
     } catch (error) {
       throw new Error(error.message);
     }
