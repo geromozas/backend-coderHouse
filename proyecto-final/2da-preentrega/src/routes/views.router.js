@@ -9,7 +9,7 @@ const mongoMessageManager = new MongoMessageManager();
 
 viewsRouter.get("/products", async (req, res) => {
   try {
-    const { limit = 10, page = 1, query, sort } = req.query;
+    const { limit = 10, page = 1, query, sort = 1 } = req.query;
     const products = await mongoProductManager.getProducts(
       limit,
       page,
@@ -30,7 +30,7 @@ viewsRouter.get("/products", async (req, res) => {
 
 viewsRouter.get("/realTimeProducts", async (req, res) => {
   try {
-    const { limit = 10, page = 1, query, sort } = req.query;
+    const { limit = 10, page = 1, query, sort = 1 } = req.query;
     const products = await mongoProductManager.getProducts(
       limit,
       page,
