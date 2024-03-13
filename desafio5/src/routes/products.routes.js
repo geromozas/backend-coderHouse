@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { mongoProductManager } from "../index.js";
 import { io } from "../index.js";
+import { adminMiddleware } from "../middleware/auth.middleware.js";
 
 const productsRouter = Router();
 
@@ -34,7 +35,7 @@ productsRouter.get("/:pid", async (req, res) => {
 });
 
 //agregar producto
-productsRouter.post("/", async (req, res) => {
+productsRouter.post("/", adminMiddleware, async (req, res) => {
   try {
     const productAdded = await mongoProductManager.addProduct(req.body);
     io.emit("productAdded", productAdded);
@@ -46,7 +47,7 @@ productsRouter.post("/", async (req, res) => {
 });
 
 //actualizar producto
-productsRouter.put("/:pid", async (req, res) => {
+productsRouter.put("/:pid", adminMiddleware, async (req, res) => {
   try {
     const id = req.params.pid;
     const response = await mongoProductManager.updateProduct(id, req.body);
@@ -58,7 +59,7 @@ productsRouter.put("/:pid", async (req, res) => {
 });
 
 //eliminar producto
-productsRouter.delete("/:pid", async (req, res) => {
+productsRouter.delete("/:pid", adminMiddleware, async (req, res) => {
   try {
     const id = req.params.pid;
     const response = await mongoProductManager.deleteProduct(id);

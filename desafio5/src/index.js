@@ -2,13 +2,16 @@ import express from "express";
 import handlebars from "express-handlebars";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import { productsRouter } from "./routes/products.router.js";
-import { cartsRouter } from "./routes/carts.router.js";
+import { productsRouter } from "./routes/products.routes.js";
+import { cartsRouter } from "./routes/carts.routes.js";
 import { dataBaseConnection } from "./dao/db/index.js";
-import { viewsRouter } from "./routes/views.router.js";
+import { viewsRouter } from "./routes/views.routes.js";
 import { Server } from "socket.io";
 import { createServer } from "node:http";
 import { MongoProductManager } from "./dao/mongoManagers/mongoProductManager.js";
+import sessionRouter from "./routes/sessions.routes.js";
+import MongoStore from "connect-mongo";
+import session from "express-session";
 
 //FileSystem
 // import { ProductManager } from "./productManager.js";
@@ -34,9 +37,23 @@ app.set("views", __dirname + "/views");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(
+  session({
+    store: MongoStore.create({
+      mongoUrl:
+        "mongodb+srv://mozasgeronimo:4715147@proyectocoder.hoo0h1r.mongodb.net/ecommerce",
+      ttl: 15,
+    }),
+    secret: "secretCoder", //encripto la info
+    resave: true, //guarde cuando haya inactividad
+    saveUninitialized: true, //guarda un objeto vacio
+  })
+);
+
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/views", viewsRouter);
+app.use("/api/sessions", sessionRouter);
 
 //SOCKET
 export const io = new Server(server);
