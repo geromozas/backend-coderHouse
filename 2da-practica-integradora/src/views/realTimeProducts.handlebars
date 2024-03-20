@@ -1,0 +1,17 @@
+<div class="products" id="home">
+  <h1>GM motos - PRODUCTOS</h1>
+  <h2>Socket</h2>
+  <nav class="products__container">
+    {{#each products}}
+      <div class="product__card">
+        <img src="/assets/{{this.thumbnail}}" alt="{{this.title}}" />
+        <h2>{{this.title}}</h2>
+        <h4>Categoria: {{this.category}}</h4>
+        <p>U$S{{this.price}}</p>
+      </div>
+    {{/each}}
+  </nav>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"></script>

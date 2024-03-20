@@ -1,0 +1,9 @@
+[
+  {
+    "id": "81397ffa-cd17-44c2-a333-277f68749c49",
+    "products": [
+      { "product_id": "producto1", "quantity": 1 },
+      { "product_id": "producto2", "quantity": 1 }
+    ]
+  }
+]

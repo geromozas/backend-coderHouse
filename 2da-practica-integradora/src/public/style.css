@@ -1,0 +1,32 @@
+* {
+  background-color: rgb(rgb(3, 18, 151));
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+.products__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  height: 100%;
+  align-items: center;
+}
+
+.product__card {
+  border: 1px solid;
+  border-radius: 0.5rem;
+  padding: 10px;
+  margin-top: 50px;
+  height: 380px;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
