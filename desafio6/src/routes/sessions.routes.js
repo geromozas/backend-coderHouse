@@ -53,7 +53,8 @@ sessionRouter.get(
     req.session.usuario = req.user;
 
     res.setHeader("Content-type", "application/json");
-    return res.status(200).json({ payload: req.user });
+    // return res.status(200).json({ payload: req.user });
+    return res.status(200).redirect("http://localhost:8080/views/profile");
   }
 );
 

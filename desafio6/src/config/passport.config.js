@@ -10,7 +10,7 @@ export const initPassport = () => {
       {
         clientID: "Iv1.9725fbcb86fac358",
         clientSecret: "86709731ce00bfbc7a98b0e179cb324d6870099d",
-        callbackURL: "http://localhost:3000/api/sessions/callbackGithub",
+        callbackURL: "http://localhost:8080/api/sessions/callbackGithub",
       },
       async (accesToken, refreshToken, profile, done) => {
         try {
