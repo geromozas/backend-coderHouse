@@ -1,6 +1,6 @@
-import express from "express";
 import { Router } from "express";
 import { MongoUserManager } from "../dao/mongoManagers/mongoUserManager.js";
+import passport from "passport";
 
 const sessionRouter = Router();
 export const mongoUserManager = new MongoUserManager();
@@ -27,7 +27,10 @@ sessionRouter.post("/login", async (req, res) => {
 
 sessionRouter.get("/logout", (req, res) => {
   req.session.destroy((err) => {
-    if (err) res.send("Error en logout");
+    if (err) {
+      console.log("Error en logout:", err);
+      res.status(500).send("Error en logout");
+    }
   });
   res.redirect("http://localhost:8080/views/login");
 });
@@ -35,5 +38,23 @@ sessionRouter.get("/logout", (req, res) => {
 sessionRouter.get("/user", (req, res) => {
   res.send(users);
 });
+
+//llamado interno para que empiece a actuar el passport y a comunicarse con github
+sessionRouter.get(
+  "/github",
+  passport.authenticate("github", {}),
+  (req, res) => {}
+);
+
+sessionRouter.get(
+  "/callbackGithub",
+  passport.authenticate("github", {}),
+  (req, res) => {
+    req.session.usuario = req.user;
+
+    res.setHeader("Content-type", "application/json");
+    return res.status(200).json({ payload: req.user });
+  }
+);
 
 export default sessionRouter;

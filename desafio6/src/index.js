@@ -12,6 +12,8 @@ import { MongoProductManager } from "./dao/mongoManagers/mongoProductManager.js"
 import sessionRouter from "./routes/sessions.routes.js";
 import MongoStore from "connect-mongo";
 import session from "express-session";
+import { initPassport } from "./config/passport.config.js";
+import passport from "passport";
 
 //FileSystem
 // import { ProductManager } from "./productManager.js";
@@ -49,6 +51,14 @@ app.use(
     saveUninitialized: true, //guarda un objeto vacio
   })
 );
+
+initPassport();
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get("/", (req, res) => {
+  res.redirect("/views/login");
+});
 
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
